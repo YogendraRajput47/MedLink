@@ -72,7 +72,7 @@ const DoctorProfile = () => {
     profileData && (
       <div
         ref={containerRef}
-        className="profile mt-0 min-h-screen w-full mx-auto bg-white shadow-2xl p-10 text-sm mb-10"
+        className="profile mt-0 min-h-screen mb-0 w-full mx-auto bg-white shadow-2xl p-10 text-sm "
       >
         {/* Top Section */}
         <div className="section flex flex-col sm:flex-row items-center gap-6 border-b border-gray-200 pb-6">
@@ -194,14 +194,14 @@ const DoctorProfile = () => {
               onClick={updateProfile}
               className="text-primary border border-primary px-10 py-3 rounded-full shadow hover:bg-primary/90 hover:text-white  transition-all duration-200"
             >
-              Save Information
+              Save 
             </button>
           ) : (
             <button
               onClick={() => setIsEdit(true)}
               className="text-primary border border-primary px-10 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-200"
             >
-              Edit Profile
+              Edit 
             </button>
           )}
         </div>
