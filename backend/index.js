@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/database');
@@ -19,6 +20,7 @@ connectToCloudinary();
 
 //middlewares
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "frontend/build")));
 app.use(cors());
 
 //routes

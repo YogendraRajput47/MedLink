@@ -20,21 +20,9 @@ import DoctorHome from "./pages/Doctor/DoctorHome";
 const App = () => {
   const { aToken } = useContext(AdminContext);
   const { dToken } = useContext(DoctorContext);
-  const profilePath = "/doctor-profile";
-  const location = useLocation();
 
-    useEffect(() => {
-      const html = document.documentElement;
-      const body = document.body;
 
-      if (location.pathname === profilePath || location.pathname==="/") {
-        html.classList.add("overflow-y-hidden");
-        body.classList.add("overflow-y-hidden");
-      } else {
-        html.classList.remove("overflow-y-hidden");
-        body.classList.remove("overflow-y-hidden");
-      }
-    }, [location.pathname]);
+  
 
   return aToken || dToken ? (
     <div
