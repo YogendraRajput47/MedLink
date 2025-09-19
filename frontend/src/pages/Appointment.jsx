@@ -93,7 +93,6 @@ const Appointment = () => {
           },
         }
       );
-      console.log(data);
       if (data.success) {
         toast.success(data.message);
         getAllDoctors();

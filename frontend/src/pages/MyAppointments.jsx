@@ -127,7 +127,6 @@ const MyAppointments = () => {
       order_id: order.id,
       receipt: order.receipt,
       handler: async (response) => {
-        console.log(response);
         const { razorpay_order_id } = response;
         try {
           const { data } = await axios.post(
@@ -159,7 +158,6 @@ const MyAppointments = () => {
         { headers: { token } }
       );
       if (data.success) {
-        console.log(data.order);
         initPayment(data.order);
       }
     } catch (error) {

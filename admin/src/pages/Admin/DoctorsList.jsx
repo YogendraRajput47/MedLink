@@ -42,7 +42,7 @@ const DoctorsList = () => {
   }, [doctors.length>0]);
 
   return (
-    <div className="m-5 max-h-[90vh] overflow-y-scroll">
+    <div className="m-5 min-h-screen">
       <h1 className="text-2xl font-semibold text-gray-800">All Doctors</h1>
       <div
         ref={containerRef}

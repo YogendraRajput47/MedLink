@@ -8,7 +8,6 @@ const AllApointments = () => {
   const { aToken, appointments, getAllAppointments, cancelUserAppointment } =
     useContext(AdminContext);
   const { calculateAge, slotDateFormat, currency } = useContext(AppContext);
-console.log(appointments);
   
   const containerRef = useRef(null);
   const rowsRef = useRef([]);
