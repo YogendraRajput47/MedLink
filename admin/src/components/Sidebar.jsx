@@ -37,7 +37,7 @@ const Sidebar = () => {
   return (
     <div
       ref={sidebarRef}
-      className={`min-h-screen max-h-screen  w-64 bg-white border-r shadow-sm flex flex-col `}
+      className={`min-h-screen w-64 bg-white border-r shadow-sm flex flex-col `}
     >
       {aToken && (
         <ul className="mt-6 flex flex-col gap-2 px-3 text-nowrap">
