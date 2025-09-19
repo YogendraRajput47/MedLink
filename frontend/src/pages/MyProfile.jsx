@@ -76,7 +76,7 @@ const MyProfile = () => {
       className="mt-24 max-w-2xl mx-auto bg-white shadow-2xl rounded-2xl p-10 text-sm"
     >
       {/* Top Section */}
-      <div className="section flex items-center gap-6 border-b border-gray-200 pb-6 ">
+      <div className="section flex flex-col sm:flex-row items-center gap-6 border-b border-gray-200 pb-6 ">
         {isEdit ? (
           <label
             htmlFor="image"
@@ -124,7 +124,7 @@ const MyProfile = () => {
               className="bg-gray-50 text-3xl font-semibold text-gray-800 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-primary"
             />
           ) : (
-            <h1 className="font-semibold text-3xl text-gray-800">
+            <h1 className="font-semibold text-xl sm:text-3xl text-gray-800">
               {userData?.name}
             </h1>
           )}
