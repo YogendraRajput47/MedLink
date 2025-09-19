@@ -163,7 +163,7 @@ const Doctors = () => {
                     >
                       {doctor.availabel ? "Availabel" : "Not availabel"}
                     </p>
-                  </div>w
+                  </div>
                   <p className="text-gray-900 text-lg font-medium">
                     {doctor.name}
                   </p>
