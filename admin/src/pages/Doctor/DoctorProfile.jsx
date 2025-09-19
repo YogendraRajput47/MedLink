@@ -75,7 +75,7 @@ const DoctorProfile = () => {
         className="profile mt-0 min-h-screen max-h-screen w-full mx-auto bg-white shadow-2xl p-10 text-sm mb-10"
       >
         {/* Top Section */}
-        <div className="section flex items-center gap-6 border-b border-gray-200 pb-6">
+        <div className="section flex flex-col sm:flex-row items-center gap-6 border-b border-gray-200 pb-6">
           <img
             src={profileData?.image}
             alt={profileData?.name}
