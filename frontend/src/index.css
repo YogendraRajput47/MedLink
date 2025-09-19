@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Outfit;
+}
+html,body{
+  overflow-x: hidden;
+}
+
+.active hr{
+    @apply block
+}
+
+::-webkit-scrollbar{
+    @apply hidden
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* Snake Border Effect */
+.snake-border {
+  --border-angle: 0deg;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: 
+    linear-gradient(white, white) padding-box,
+    conic-gradient(
+      from var(--border-angle),
+      #5f6FFF 0deg,
+      #5f6FDD 180deg,
+      #5f6FFF 360deg
+    ) border-box;
+  animation: border-rotate 4s linear infinite;
+}
+
+
+@media(max-width: 740px) {
+  .active p{
+    @apply text-white bg-primary
+  }
+} 
