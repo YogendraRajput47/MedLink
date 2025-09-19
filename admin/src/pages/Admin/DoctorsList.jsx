@@ -33,7 +33,7 @@ const DoctorsList = () => {
           delay: i * 0.2,
           scrollTrigger: {
             trigger: card,
-            start: "top 90%",
+            start: "top 50%",
           },
           ease: "power2.out",
         }
