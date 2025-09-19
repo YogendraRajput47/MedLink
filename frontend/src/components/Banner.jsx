@@ -10,28 +10,30 @@ gsap.registerPlugin(ScrollTrigger);
 const Banner = () => {
   const navigate = useNavigate();
   const { count, ref } = useCountUp(100, 1500);
- const topRef = useRef();
+  const topRef = useRef();
 
- useGSAP(() => {
-   gsap.fromTo(
-     topRef.current,
-     { opacity: 0, x: 100 },
-     {
-       x: 0,
-       opacity: 1,
-       duration: 0.5,
-       delay: 0.2,
-       scrollTrigger: {
-         trigger: topRef.current,
-         start: "top 50%",
-       },
-     }
-   );
- }, []);
-
+  useGSAP(() => {
+    gsap.fromTo(
+      topRef.current,
+      { opacity: 0, x: 100 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.5,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: topRef.current,
+          start: "top 50%",
+        },
+      }
+    );
+  }, []);
 
   return (
-    <div ref={topRef} className="w-full flex px-6 sm:px-10 md:px-14 lg:px-12 border-b border-primary my-20 md:mx-10 rounded-lg  ">
+    <div
+      ref={topRef}
+      className="w-full flex px-6 sm:px-10 md:px-14 lg:px-12 border-b border-primary my-20 md:mx-10 rounded-lg  "
+    >
       {/* ----------------Left-side ---------------*/}
       <div className="flex-1 py-8 sm:py-10 md:py-16 lg:py-24 lg:pl-5">
         <div className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold ">
@@ -50,7 +52,10 @@ const Banner = () => {
           </p>
         </div>
         <button
-          onClick={() => navigate("/login")}
+          onClick={() => {
+            navigate("/login");
+             scrollTo(0, 0);
+          }}
           className="relative px-8 py-3 rounded-full font-medium text-white mt-6 overflow-hidden group"
         >
           <span className="relative z-10 text-indigo-500">Create Account</span>
